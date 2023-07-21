@@ -1,0 +1,13 @@
+<div class="flex-col gap-8 w-screen h-screen bg-[#e9d4a6] flex justify-center items-center">
+  <div class="w-96 h-96 border-8 border-gray-200 bg-white gap-3 flex flex-col items-center justify-center text-black rounded-full shadow-xl shadow-neutral-500">
+    <div class="w-48">
+      <img src="../assets/img/biscoito.png" alt="Biscoito">
+    </div>
+    <div class="w-full h-10 p-3 text-black text-center">
+      <p *ngIf="mostrarFrase">{{ fraseAleatoria }}</p>
+    </div>
+  </div>
+  <div>
+    <button (click)="exibirFrase()" class="font-semibold rounded-md p-2 text-white bg-[#edb845] hover:bg-[#fab153] outline-none">VER MINHA SORTE</button>
+  </div>
+</div>
