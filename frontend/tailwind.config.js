@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'fonte': ['Press\\ Start\\ 2P', 'cursive']
+      },
+      backgroundImage: {
+        'papel': "url('/assets/img/papel.jpg')",
+      }
+
+    },
   },
   plugins: [],
 }

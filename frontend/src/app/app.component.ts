@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   frases: string[] = [];
   fraseAleatoria = '';
   mostrarFrase = false;
+  urlImagem = '../assets/img/biscoito.png';
 
   constructor(private http: HttpClient) { }
 
@@ -33,5 +34,10 @@ export class AppComponent implements OnInit {
   exibirFrase() {
     this.fraseAleatoria = this.frases[Math.floor(Math.random() * this.frases.length)];
     this.mostrarFrase = true;
+    this.mudarImagem();
+  }
+
+  mudarImagem(){
+    this.urlImagem = '../assets/img/biscoito-back.png'
   }
 }
