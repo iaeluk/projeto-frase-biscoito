@@ -20,12 +20,12 @@ export class AppComponent implements OnInit {
 
   carregarFrases() {
     this.http.get<{ frase: string }[]>(this.apiUrl).subscribe(
-      (data) => {
-        this.frases = data.map(item => item.frase);
-        console.log(this.frases);
-      },
-      (error) => {
-        console.log('Erro ao carregar as frases:', error);
+      {
+        next: (queryParams) => {
+          this.frases = queryParams.map(item => item.frase);
+        },
+        error: (err: any) => { console.log('Erro ao carregar as frases:', err); },
+        complete: () => { }
       }
     );
   }
