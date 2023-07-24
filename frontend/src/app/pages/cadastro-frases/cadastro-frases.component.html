@@ -1,1 +1,12 @@
-<h1>CADASTRANDO FRASES</h1>
+<div class="flex justify-center items-center relative">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
+        <h1 class="text-center text-gray-800 text-2xl font-semibold mb-6 mr-20 ml-20">Cadastro de Frases</h1>
+        <form action="#" method="post" class="space-y-4">
+            <div>
+                <label for="frase" class="block text-gray-600 mb-1">Frase:</label>
+                <textarea id="frase" name="frase" [(ngModel)]="frase" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" required></textarea>
+            </div>
+            <button (click)="cadastrarFrase()" type="submit" class="w-full bg-blue-500 text-white rounded-md py-2 transition-colors duration-300 hover:bg-blue-600">Cadastrar</button>
+        </form>
+    </div>
+</div>
