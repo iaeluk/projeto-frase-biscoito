@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './cadastro-frases.component.html',
   styleUrls: ['./cadastro-frases.component.sass']
 })
+
 export class CadastroFrasesComponent {
   isModalOpen :boolean = false;
 
