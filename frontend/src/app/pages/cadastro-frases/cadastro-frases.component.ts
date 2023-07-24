@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cadastro-frases.component.sass']
 })
 export class CadastroFrasesComponent {
+  isModalOpen :boolean = false;
 
+  openModal() {
+    this.isModalOpen = !this.isModalOpen;
+  }
 }
