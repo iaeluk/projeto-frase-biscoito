@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class CadastroFrasesComponent {
+  isModalOpen :boolean = false;
 
   apiUrl = 'https://biscoito-da-sorte-59c63b6adf76.herokuapp.com/';
 
