@@ -1,15 +1,18 @@
 <div class="gap-8 h-full flex justify-center">
-  <div class="relative w-96 h-96 border-8 border-gray-200 bg-white gap-3 flex flex-col items-center justify-center text-black rounded-full shadow-xl shadow-neutral-500">
-    
-    <div class="text-gray-700 text-center bg-gray-200 absolute top-8 rounded-lg">
+  <div class="relative w-96 h-72 bg-white gap-3 flex flex-col items-center justify-center text-black rounded-sm shadow-xl shadow-neutral-500">
+    <div class="text-gray-800 text-center rounded-lg p-3">
       <p class="p-2" *ngIf="mostrarFrase">{{ fraseAleatoria }}</p>
+      <span class="opacity-80 absolute -top-3 -right-3"><img class="w-8" src="../assets/img/biscoito.png" alt="Foto Biscoito"></span>
     </div>
-
-    <button (click)="exibirFrase()" class="w-48 absolute bottom-10" title="Clique para ver a sua sorte.">
-      <img  src="../assets/img/biscoito.png" alt="Foto Biscoito">
-    </button>
-    
   </div>
+</div>
+
+<div class="flex items-center justify-center mt-5 gap-8">
+  <img class="w-20" src="../assets/img/seta.png" alt="Foto Seta">
+  <button (click)="exibirFrase()" class="w-20" title="Clique para ver a sua sorte.">
+    <img  src="../assets/img/trevo.png" alt="foto de trevo">
+  </button>
+  <img class="w-20 rotate-180" src="../assets/img/seta.png" alt="Foto seta">
 </div>
 
 
