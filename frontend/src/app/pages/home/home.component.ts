@@ -34,4 +34,5 @@ export class HomeComponent implements OnInit{
     this.fraseAleatoria = this.frases[Math.floor(Math.random() * this.frases.length)];
     this.mostrarFrase = true;
   }
+  
 }

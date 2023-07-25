@@ -12,22 +12,22 @@ export class CadastroFrasesComponent {
   apiUrl = 'https://biscoito-da-sorte-59c63b6adf76.herokuapp.com/';
 
   frase: string = '';
+  fraseCadastrada: boolean = false;
 
   constructor(private http: HttpClient) { }
 
   cadastrarFrase() {
     const body = { frase: this.frase };
-    const headers = { 'Content-Type': 'application/json' }; // Defina os cabeçalhos da requisição
+    const headers = { 'Content-Type': 'application/json' };
 
     return this.http.post(this.apiUrl, JSON.stringify(body), { headers }).subscribe({
       next: () => {
         console.log('Frase cadastrada com sucesso!');
-        alert('Frase cadastrada com sucesso!');
+        this.fraseCadastrada = true
         this.frase = ''
-        // Realize qualquer ação necessária após o cadastro da frase, como exibir uma mensagem de sucesso, por exemplo.
       },
       error: (err: any) => { console.log('Erro ao cadastrar a frase:', err); },
-      complete: () => { }
+      complete: () => {}
     });
   }
 }
